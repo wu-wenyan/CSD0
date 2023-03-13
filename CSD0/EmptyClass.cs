@@ -5,6 +5,28 @@
         int[]num = nu.ToArray();
         QuickSort(num, begin, end);
         IEnumerable<int> sort_Array = num;
+        int j = 1;
+        foreach (int i in sort_Array)
+        {
+            if (i < 100)
+            {
+                Console.Write($"0{i}");
+            }
+            else
+            {
+                Console.Write($"{i}");
+            }
+            if (j % 2 == 1)
+            {
+                Console.Write("\t");
+            }
+            else
+            {
+                Console.Write("\n");
+            }
+            j++;
+        }
+
         return sort_Array;
     }
     
